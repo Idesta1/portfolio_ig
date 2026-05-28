@@ -203,7 +203,11 @@ export default function App() {
             >
               <span className="theme-toggle-track">
                 <span className="theme-toggle-thumb">
-                  {isDarkMode ? <MoonStar size={12} /> : <SunMedium size={12} />}
+                  {isDarkMode ? (
+                    <MoonStar size={12} />
+                  ) : (
+                    <SunMedium size={12} />
+                  )}
                 </span>
               </span>
               <span className="theme-toggle-label">
@@ -279,7 +283,12 @@ export default function App() {
               />
             </div>
             <p className="text-lg md:text-2xl text-zinc-500 font-light leading-relaxed mb-10 max-w-lg">
-             I build modern and user-friendly web applications with React, Next.js, TypeScript, JavaScript, and responsive design, with additional experience in backend development, APIs, and SQL. I enjoy creating clean and interactive digital experiences while continuously growing my full-stack development skills through hands-on projects and collaboration.
+              I build modern and user-friendly web applications with React,
+              Next.js, TypeScript, JavaScript, and responsive design, with
+              additional experience in backend development, APIs, and SQL. I
+              enjoy creating clean and interactive digital experiences while
+              continuously growing my full-stack development skills through
+              hands-on projects and collaboration.
             </p>
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
               <a
@@ -307,11 +316,13 @@ export default function App() {
                 <Briefcase size={14} /> My Journey
               </div>
               <h2 className="text-5xl md:text-6xl font-earthlight tracking-tight text-zinc-900 uppercase">
-                Skills 
+                Skills
               </h2>
             </div>
             <p className="text-zinc-400 max-w-sm text-lg font-light leading-snug">
-              I have strong hands-on skills in front-end and full-stack development, with a focus on creating responsive and user-friendly web applications.
+              I have strong hands-on skills in front-end and full-stack
+              development, with a focus on creating responsive and user-friendly
+              web applications.
             </p>
           </div>
 
@@ -402,7 +413,7 @@ export default function App() {
 
       <footer
         id="contact"
-        className="py-32 px-6 border-t border-rose-50 bg-gradient-to-b from-white to-amber-50/30"
+        className="footer-bloom relative overflow-hidden py-32 px-6 border-t border-rose-50 bg-gradient-to-b from-white to-amber-50/30"
       >
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
           <div className="w-24 h-24 bg-rose-50 border border-rose-100 rounded-[2.5rem] mb-12 flex items-center justify-center shadow-sm">
@@ -411,14 +422,14 @@ export default function App() {
           <h2 className="text-5xl md:text-7xl font-extralight tracking-tighter mb-8 text-zinc-900 uppercase">
             Let's Connect!
           </h2>
-          <p className="text-zinc-400 max-w-lg mb-12 font-light text-lg leading-relaxed">
+          <p className="text-zinc-600 max-w-lg mb-12 font-normal text-lg leading-relaxed">
             I love meeting curious, creative people. Whether you want to
             collaborate, have a question, or just want to say hi — my inbox is
             always open.
           </p>
           <a
-            href="mailto:hello@example.com"
-            className="text-2xl md:text-5xl text-zinc-300 hover:text-rose-500 transition-colors border-b-2 border-zinc-100 hover:border-rose-300 pb-4 mb-20 inline-block font-thin tracking-tight"
+            href="mailto:iglesia25@gmail.com"
+            className="text-2xl md:text-5xl text-zinc-500 hover:text-rose-500 transition-colors border-b-2 border-zinc-100 hover:border-rose-300 pb-4 mb-20 inline-block font-light tracking-tight"
           >
             hello@example.com
           </a>
@@ -433,16 +444,26 @@ export default function App() {
             </a>
           </div>
 
-          <div className="w-full pt-16 border-t border-amber-50 flex flex-col md:flex-row justify-between items-center gap-8 text-zinc-300 text-[9px] font-mono tracking-[0.4em] uppercase">
-            <p>© 2026 Your Name</p>
-            <div className="flex gap-12 text-zinc-400">
-              <a href="#" className="hover:text-rose-500 transition-colors">
+          <div className="w-full pt-16 border-t border-amber-50 flex flex-col md:flex-row justify-between items-center gap-8 text-zinc-500 text-[10px] font-medium tracking-[0.32em] uppercase">
+            <p>Coded by Iglesia G. Desta © 2026</p>
+            <div className="flex gap-12 text-zinc-600 font-medium">
+              <a
+                href="https://www.linkedin.com/in/iglesia-desta-"
+                className="hover:text-rose-500 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 LinkedIn
               </a>
               <a href="#" className="hover:text-rose-500 transition-colors">
                 Resume
               </a>
-              <a href="#" className="hover:text-rose-500 transition-colors">
+              <a
+                href="https://github.com/Idesta1"
+                className="hover:text-rose-500 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 GitHub
               </a>
             </div>
