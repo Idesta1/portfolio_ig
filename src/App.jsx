@@ -293,7 +293,7 @@ export default function App() {
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
               <a
                 href="#contact"
-                className="px-10 py-4 bg-rose-400 text-white rounded-full font-semibold hover:bg-rose-500 transition-all hover:scale-105 flex items-center gap-2"
+                className="connect-cta px-10 py-4 text-white rounded-full font-semibold transition-all hover:scale-105 flex items-center gap-2"
               >
                 Let's Connect <ChevronRight size={18} />
               </a>
@@ -430,9 +430,7 @@ export default function App() {
           <a
             href="mailto:iglesia25@gmail.com"
             className="text-2xl md:text-5xl text-zinc-500 hover:text-rose-500 transition-colors border-b-2 border-zinc-100 hover:border-rose-300 pb-4 mb-20 inline-block font-light tracking-tight"
-          >
-            hello@example.com
-          </a>
+          ></a>
 
           <div className="flex gap-8 mb-24 opacity-60 hover:opacity-100 transition-opacity">
             <a
