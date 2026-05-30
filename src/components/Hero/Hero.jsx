@@ -1,5 +1,6 @@
 import { heroImage } from "../../services/cloudinary";
 import { ChevronRight } from "lucide-react";
+import denmarkFlag from "../../assets/icons/denmark-flag.svg";
 
 function Hero() {
   return (
@@ -13,7 +14,7 @@ function Hero() {
               className="h-full w-full object-cover"
               loading="eager"
               fetchpriority="high"
-              decoding="sync"
+              decoding="async"
             />
           </div>
         </div>
@@ -22,19 +23,17 @@ function Hero() {
           <p className="text-rose-400 text-lg italic mb-3">
             Glad you're here — I'm
           </p>
-          <span className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-yellow-400 to-red-500">
-            Iglesia
-          </span>
-          <h1 className="text-3xl md:text-5xl font-extralight tracking-tighter leading-[0.9] uppercase text-zinc-900">
-            a Front-end Developer
+          <h1 className="mb-1">
+            <span className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-yellow-400 to-red-500">
+              Iglesia
+            </span>
+            <span className="block text-3xl md:text-5xl font-extralight tracking-tighter leading-[0.9] uppercase text-zinc-900">
+              a Front-end Developer
+            </span>
           </h1>
           <div className="mb-6 flex items-center justify-center gap-2 text-2xl md:text-4xl font-light tracking-tight text-zinc-700 uppercase md:justify-start">
             <span>based in Denmark</span>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Denmark.svg"
-              alt="Denmark flag"
-              className="w-5 h-auto"
-            />
+            <img src={denmarkFlag} alt="Denmark flag" className="w-5 h-auto" />
           </div>
           <p className="text-lg md:text-2xl text-zinc-500 font-light leading-relaxed mb-10 max-w-lg">
             I build modern and user-friendly web applications with React,
@@ -49,7 +48,7 @@ function Hero() {
               href="#contact"
               className="connect-cta px-10 py-4 text-white rounded-full font-semibold transition-all hover:scale-105 flex items-center gap-2"
             >
-              Let's Connect <ChevronRight size={18} />
+              Let's Connect <ChevronRight size={18} aria-hidden="true" />
             </a>
             <a
               href="#projects"

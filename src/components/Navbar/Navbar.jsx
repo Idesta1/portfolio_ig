@@ -15,9 +15,13 @@ function Navbar({ isDarkMode, setIsDarkMode }) {
             </span>
             <span className="nav-code-cursor" aria-hidden="true" />
           </div>
-          <span className="text-xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-yellow-400 to-red-500">
+          <a
+            href="/"
+            aria-label="Iglesia — home"
+            className="text-xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-yellow-400 to-red-500"
+          >
             IGLESIA
-          </span>
+          </a>
         </div>
 
         <div className="ml-auto hidden items-center gap-5 md:flex">
@@ -72,6 +76,8 @@ function Navbar({ isDarkMode, setIsDarkMode }) {
             className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle navigation menu"
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
           >
             {isMenuOpen ? <X /> : <Menu />}
           </button>
@@ -79,7 +85,11 @@ function Navbar({ isDarkMode, setIsDarkMode }) {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden px-6 pb-6 flex flex-col gap-4 text-zinc-600 bg-white border-b border-zinc-100">
+        <nav
+          id="mobile-menu"
+          aria-label="Mobile navigation"
+          className="md:hidden px-6 pb-6 flex flex-col gap-4 text-zinc-600 bg-white border-b border-zinc-100"
+        >
           <a href="#work" onClick={() => setIsMenuOpen(false)}>
             Experience
           </a>
@@ -89,7 +99,7 @@ function Navbar({ isDarkMode, setIsDarkMode }) {
           <a href="#contact" onClick={() => setIsMenuOpen(false)}>
             Contact
           </a>
-        </div>
+        </nav>
       )}
     </nav>
   );

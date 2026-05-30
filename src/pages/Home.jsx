@@ -1,15 +1,19 @@
+import { lazy, Suspense } from "react";
 import Hero from "../components/Hero/Hero";
-import SkillsCard from "../components/Skills/SkillsCard";
-import ProjectCard from "../components/ProjectCard/ProjectCard";
-import Footer from "../components/Footer/Footer";
+
+const SkillsCard = lazy(() => import("../components/Skills/SkillsCard"));
+const ProjectCard = lazy(() => import("../components/ProjectCard/ProjectCard"));
+const Footer = lazy(() => import("../components/Footer/Footer"));
 
 function Home() {
   return (
     <main>
       <Hero />
-      <SkillsCard />
-      <ProjectCard />
-      <Footer />
+      <Suspense fallback={null}>
+        <SkillsCard />
+        <ProjectCard />
+        <Footer />
+      </Suspense>
     </main>
   );
 }

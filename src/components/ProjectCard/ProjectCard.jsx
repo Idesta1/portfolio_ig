@@ -3,14 +3,24 @@ import { projects } from "../../data/projects";
 
 function ProjectCard() {
   return (
-    <section id="projects" className="py-32 px-6 bg-rose-50/20">
+    <section
+      id="projects"
+      aria-labelledby="projects-heading"
+      className="py-32 px-6 bg-rose-50/20"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center gap-4 mb-20">
-          <div className="w-14 h-14 bg-white border border-rose-100 rounded-2xl flex items-center justify-center text-rose-400 shadow-sm">
+          <div
+            className="w-14 h-14 bg-white border border-rose-100 rounded-2xl flex items-center justify-center text-rose-400 shadow-sm"
+            aria-hidden="true"
+          >
             <Code size={28} />
           </div>
           <div>
-            <h2 className="text-5xl font-extralight tracking-tight text-zinc-900 uppercase">
+            <h2
+              id="projects-heading"
+              className="text-5xl font-extralight tracking-tight text-zinc-900 uppercase"
+            >
               Projects
             </h2>
             <p className="text-zinc-400 text-sm mt-1 italic">
@@ -43,11 +53,13 @@ function ProjectCard() {
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`View ${project.title}`}
                     className="mt-auto flex items-center gap-3 border-b border-rose-200 pb-2 text-[10px] font-semibold uppercase tracking-[0.3em] text-rose-500 transition-colors hover:border-rose-500"
                   >
                     View
                     <ExternalLink
                       size={14}
+                      aria-hidden="true"
                       className="transition-transform group-hover:translate-x-1"
                     />
                   </a>
